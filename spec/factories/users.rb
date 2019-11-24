@@ -1,15 +1,18 @@
 # frozen_string_literal: true
 
-def digest(string)
-  cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-                                                BCrypt::Engine.cost
-  BCrypt::Password.create(string, cost: cost)
-end
-
 FactoryBot.define do
+  sequence :email do |n|
+    "exeample#{n}@example.com"
+  end
+
+  sequence :name do |_n|
+    'person example'
+  end
+
   factory :user do
-    name { 'person example' }
-    email { 'example@example.com' }
-    password_digest { digest(SecureRandom.urlsafe_base64) }
+    name
+    email
+    password { '1Pa$$w0rd' }
+    password_confirmation { '1Pa$$w0rd' }
   end
 end
