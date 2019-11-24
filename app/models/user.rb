@@ -8,7 +8,7 @@ class User < ApplicationRecord
                       (?=.*[[:^alnum:]])
                       /x.freeze
 
-  NAME_REGEX = /\A[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*\z/.freeze
+  NAME_REGEX = /\A[a-zA-Z]+(([' -][a-zA-Z ])?[a-zA-Z]*)*\z/.freeze
 
   has_secure_password
 
