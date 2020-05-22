@@ -7,7 +7,7 @@ ruby '2.6.3'
 gem 'active_model_serializers', '~> 0.10.10'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt', '~> 2.2', '>= 2.2.1'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'rails', '~> 6.0.1'
 gem 'sqlite3', '~> 1.4'
 # Use Active Storage variant
